@@ -1,0 +1,24 @@
+<table>
+    <thead>
+       <tr>
+        <th scope="col" style="border-right:1px solid;width:200px;">Name</th>
+        <th scope="col" style="border-right:1px solid;width:200px;">Price</th>
+        <th scope="col" style="border-right:1px solid;width:200px;"></th>   
+    </tr> 
+    </thead>
+
+    <ng-container *ngFor="let data of products">
+        <tr>
+            <td>
+                {{data.name}}
+            </td>
+            <td>
+                {{data.price}}
+            </td>
+            <td>
+                <button type="button" class="btn btn-primary" (click)="viewDetails(data.id)">View Detail</button> 
+            </td>
+        </tr>
+    </ng-container>
+
+</table>

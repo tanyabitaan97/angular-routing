@@ -1,0 +1,23 @@
+<div *ngFor="let pd of productDetails">
+        <div *ngIf="pd.display" 
+        style="display:flex;">
+        
+<div style="display:grid;grid-auto-columns:min-content;">
+            Name:{{pd.name}}
+            Description:{{pd.description}}
+            Price:{{pd.price}}
+        </div>
+            
+        <div>
+           <img src={{pd.image}}>
+        </div>
+   
+     </div>
+
+     </div>
+
+     <div>
+      <a href="product">Go To Products List</a>  
+     </div>
+
+
