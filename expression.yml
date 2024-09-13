@@ -1,0 +1,14 @@
+name: Expression function demo
+on:
+  push:
+    branches:
+       - main
+Jobs:
+    expression-functions:
+         runs-on: ubuntu-latest
+         steps:
+           - name: check if string contains substring
+             if: contains("hello world","llo")
+             run: echo "the string contains the substring"
+           - name: The job has succeeded
+             if: ${{success()}}
