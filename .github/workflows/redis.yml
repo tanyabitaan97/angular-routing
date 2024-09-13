@@ -1,0 +1,9 @@
+name: redis container example
+on: push
+jobs:
+  container-job:
+        runs-on: ubuntu-latest
+        container: node:16-bullseye
+        services:
+            redis:
+               image: redis
